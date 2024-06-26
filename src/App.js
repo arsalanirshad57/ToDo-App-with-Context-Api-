@@ -33,7 +33,7 @@ function App() {
         return [...prevVal]
       } else {
         return [{
-          id: Math.round(Math.random() * 1000),
+          id: Math.round(Math.random() * 1000), 
           ...todo
         }, ...prevVal]
       }
