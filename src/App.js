@@ -80,15 +80,15 @@ function App() {
   return (
     <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
       <TodoProvider value={{ todos, onDelete, addTodo, onEdit, toogleComplete }}>
-        <div className="relative flex h-screen dark:text-white text-gray-600 dark:bg-black bg-white">
+        <div className="relative flex min-h-screen max-h-full dark:text-white text-gray-600 dark:bg-black bg-white ">
           <BgImage />
           <div className=' flex flex-col gap-8 w-11/12 sm:w-10/12 md:w-600 h-96 border-black z-50 mt-36 mx-auto '>
             <NavBar />
             <div className='flex flex-col gap-5 z-50 '>
-              {/* Add To Do  */}
+              {/* Add To Do  */} 
               <AddToDo />
               {/* All To Dos  */}
-              <div className='flex flex-col divide-y dark:divide-gray-700 divide-gray-300 dark:bg-slate-800  bg-white rounded-sm py-2 dark:shadow-none shadow-md'>
+              <div className='flex flex-col divide-y dark:divide-gray-700 divide-gray-300 dark:bg-slate-800  bg-white rounded-sm py-2 dark:shadow-none shadow-md mb-5'> 
                 {
                   todos?.map((todo) => (
                     <Tasks key={todo?.id} todo={todo} />
